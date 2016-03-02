@@ -17,9 +17,11 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "pygments";
 .center{
 	text-align: center;
 }
+
 .center-head{
  	margin-bottom: 20px;
  	
@@ -49,3 +51,6 @@
  .caret{
  	color: #de5a51;
  }
+ .text-area{
+	height: 600px;
+}

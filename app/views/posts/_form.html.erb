@@ -1,5 +1,5 @@
 
-<%= bootstrap_form_for :post, :html => { :id=> "identicalForm"} do |f| %>
+<%= bootstrap_form_for :posts, :html => { :id=> "identicalForm"} do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>

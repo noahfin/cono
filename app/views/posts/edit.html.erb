@@ -1,6 +1,23 @@
-<h1>Editing post</h1>
+<h1 class="align-center">Editing post</h1>
 
-<%= render 'form' %>
+<%= bootstrap_form_for :post, :html => { :method=> "PATCH",:id=> "identicalForm"}, url: '/posts/' + @post.id.to_s do |f| %>
 
+            <div class="field">
+    
+    <%= f.text_field :title,placeholder: 'Title', hide_label: true %>
+  </div>
+  <div class="field">
+    
+    <%= f.text_area :content,placeholder: 'Content', hide_label: true %>
+  </div>
+  <div class="field">
+    
+    <%= f.text_field :category_id, placeholder: 'Category ID', hide_label: true %>
+  </div>
+            <%= f.submit "Submit",  class: 'btn btn-warning check' %>
+
+          <% end %>
+<center>
 <%= link_to 'Show', @post %> |
 <%= link_to 'Back', posts_path %>
+</center>
