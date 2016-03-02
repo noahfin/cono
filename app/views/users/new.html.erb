@@ -1,0 +1,20 @@
+
+  
+
+
+
+<div class="container" >
+ 
+
+<%= bootstrap_form_for :user, :html => { :id=> "identicalForm"}, url: '/users' do |f| %>
+  <h1 class ="center-head">Signup!</h1>
+             <%= f.text_field :name,autofocus: true, placeholder: 'Name', hide_label: true %>
+
+           <%= f.text_field :email,  placeholder: 'Email', hide_label: true %>
+           <%= f.password_field :password,  placeholder: 'Password' , hide_label: true, id:"password" %>
+            <%= f.password_field :password_confirmation,  placeholder: 'Password confirmation', hide_label: true, id:"confirm_password" %>
+            <%= f.submit "Submit",  class: 'btn  btn-success check' %>
+
+
+<% end %>
+</div>
