@@ -1,4 +1,5 @@
-<%= form_for(@post) do |f| %>
+
+<%= bootstrap_form_for :post, :html => { :id=> "identicalForm"} do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
@@ -12,18 +13,19 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    
+    <%= f.text_field :title,placeholder: 'Title', hide_label: true %>
   </div>
   <div class="field">
-    <%= f.label :content %><br>
-    <%= f.text_area :content %>
+    
+    <%= f.text_area :content,placeholder: 'Content', hide_label: true %>
   </div>
   <div class="field">
-    <%= f.label :category_id %><br>
-    <%= f.text_field :category_id %>
+    
+    <%= f.text_field :category_id, placeholder: 'Category ID', hide_label: true %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-primary"  %>
   </div>
 <% end %>
+ 

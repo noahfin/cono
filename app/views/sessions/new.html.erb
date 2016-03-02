@@ -1,0 +1,13 @@
+<div class="container">
+
+
+<div class="form-center">
+<h1 class= "center-head">Login</h1>
+	<%= bootstrap_form_tag  url: '/login'  do |f| %>
+  	 <%= f.text_field :email,autofocus: true, placeholder: 'Email', hide_label: true %>
+  	<%= f.password_field :password,  placeholder: 'Password' , hide_label: true, id:"password" %>
+	<%= f.submit "Submit",  class: 'btn  btn-success check' %>
+  <% end %>
+
+</div>
+</div>
