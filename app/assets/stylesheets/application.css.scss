@@ -18,6 +18,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "pygments";
+
 .center{
 	text-align: center;
 }
@@ -59,4 +60,38 @@
 }
 .col-md-12{
 	width: 1010px;
+	height: 300px;
+	overflow: scroll;
 }
+.note-section{
+	height: 5000 !important;
+	overflow: scroll  !important;
+}
+#note-div{
+	margin-top: 40px;
+	position: relative;
+    height: auto !important;
+	overflow: scroll  !important;
+	
+	overflow-y: auto;
+}
+.left-nav{
+	top: 64;
+	position: fixed;
+	height: 1400px;
+	overflow: scroll  !important;
+		
+		}
+
+		.nav-header{
+			margin-top: 40px;
+		background-color:	 #263238;
+        padding: 20px;
+        padding-top: 30px;
+        height: 251px;
+        color: whitesmoke;
+		}
+
+
+
+

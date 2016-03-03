@@ -3,7 +3,7 @@ class CategoriesController < ApplicationController
 	end
 	def index
 		@post =  Post.where("category_id = ?", params[:id])
-		
+		@categories = Category.all
 		
 
 	end

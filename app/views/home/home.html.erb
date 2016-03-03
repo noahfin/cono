@@ -32,9 +32,9 @@ body{
 		.left-nav{
 
 			position: fixed;
-			
+		
 			width: 220px;
-			height: 800px;
+			height: 1100px;
 			background-color: #37474f;
 
 		}
@@ -57,8 +57,9 @@ body{
 
 		}
 		.note-section{
-			position: fixed;
+		
 			max-width: 1060px;
+			overflow: auto;
 			margin-left: 245px;
 			margin-top: 5px;
 			
@@ -134,28 +135,30 @@ body{
 		</ul>
 
 	</nav>
+	  <div style="clear: both;"></div> 
+  <!-- Now in order to prevent the next div from floating beside the top ones, 
+       we use `clear: both;`. This is like a wall, so now none of the div's 
+       will be floated after this point. The container height will now also include the 
+       height of these floated divs -->
+  <div></div>
 	<section class="note-section"> 
-		<h1>List of all categories</h1>
+
+  <div id="note-div">
+		<h1>List of all notes</h1>
+		<% @posts.each do |post| %>
 		<div class='row' >
 			<div class='col-md-12'>
 		
 		<br>
- 		 asdf
+ 		 <%= post.title %>
  		 <br>
+ 		 <%= markdown post.content %>
  		 <hr>
  		 </div>
  		  </div>
- 		 <div class='row'><div class='col-md-12'>
-  		asdf
-  		 <br>
- 		 <hr>
-	</div>
-	 </div>
-	  <div class="row" id= "middleRow">
-
-
-  </div>
-		
+ 		  <%end%>
+ 		 
+		</div>
 
 
  
