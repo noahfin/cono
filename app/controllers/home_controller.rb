@@ -3,8 +3,8 @@ class HomeController < ApplicationController
 
 	end
 	def home
-		@categories = Category.all
-		@posts = Post.all
+		@categories  =  Category.where("user_id = ?", current_user.id)
+	    @posts =  Post.where("user_id = ?", current_user.id)
 	
 
 	end

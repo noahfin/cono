@@ -11,6 +11,7 @@ gem "font-awesome-rails"
 gem 'bootstrap_form'
 gem 'pygments.rb', '~> 0.6.0'
 gem 'redcarpet' , '~> 3.2.2'
+gem 'foreigner'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
