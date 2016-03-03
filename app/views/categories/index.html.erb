@@ -124,7 +124,7 @@ body{
 				<% if @categories %>
 				<% @categories.each do |item| %>
 			<li>
-				<a href="category/<%= item.id %>"><i class=" fa fa-folder"></i><%=item.name%></a>				
+				<i class=" fa fa-folder"></i>&nbsp;<%= link_to item.name, "/category/#{item.id}/" %>
 			</li>
 			<% end %>
 			<% end %>
