@@ -1,96 +1,5 @@
 
-	<style type="text/css">
-body{
-			 font-family: "Helvetica","Arial",sans-serif;
-    		font-size: 14px;
-    		font-weight: 400;
-   			line-height: 20px;
-		}
-		a{
-			color: #757575; 
-		}
-		.bottom-links{
-			list-style: none;
-			 padding: 16px 40px;
-   			 margin: 0;
-    		color: #757575;
-		}
-		a .bottom-links{
-			color: #757575;
-		}
-		
-		.caret {
-			font-size: 14px;
-
-		}
-		.navbar #brand{
-			padding-left: -24px;
-			font-size: 21px;
-			margin-left: -50px;
-			
-		}
-		.left-nav{
-
-			position: fixed;
-		
-			width: 220px;
-			height: 1100px;
-			background-color: #37474f;
-
-		}
-		.nav-header{
-
-		background-color:	 #263238;
-        padding: 20px;
-        padding-top: 30px;
-        height: 151px;
-        color: whitesmoke;
-		}
-		.left-nav i {
-			padding-right: 5px;
-			font-weight: 200;
-		}
-		.left-nav li{
-			padding-bottom: 8px;
-			font-size: 16px;
-			
-
-		}
-		.note-section{
-		
-			max-width: 1060px;
-			overflow: auto;
-			margin-left: 235px;
-			margin-top: 5px;
-			
-
-		}
-		.panel-default{
-			width: 1150px;
-		}
-		#center{
-			padding-right: 5px;
-			position: relative;
-			left: 500px;
-			margin: 0 auto;
-			text-align: center;
-			color: black;
-		}
-
-	.fa-tint{
-	 	padding-left: 4px;
-	 }
-	 .user-avater{
-	 object-fit: cover;
-	 }
-	 ul{
-	 	list-style: none;
-	 }
-	.left-nav .caret{
-		margin-left: -20px;
-	 }
-
-	</style>
+	
 
 </head>
 <body>
@@ -143,22 +52,25 @@ body{
   <div></div>
 	<section class="note-section"> 
 
+
   <div id="note-div">
+  	<% if @posts %>
 		<h1>List of all notes</h1>
 		<% @posts.each do |post| %>
 		<div class='row' >
 			<div class='col-md-12'>
 		
 		<br>
- 		 <%= post.title %>
+ 		<a href="/posts/<%=post.id%>"><%= post.title %></a>
  		 <br>
  		 <%= markdown post.content %>
  		 <hr>
  		 </div>
  		  </div>
- 		  <%end%>
  		 
-		</div>
+ 		  <%end%>
+ 		  <%end%>
+ 		   </div>
 
 
  

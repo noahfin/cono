@@ -2,10 +2,9 @@ class CategoriesController < ApplicationController
 	def new
 	end
 	def index
-		@post =  Post.where("category_id = ?", params[:id])
+		@posts =  Post.where("category_id = ?", params[:id])
 		@categories = Category.all
 		
-
 	end
 	def create
 

@@ -143,23 +143,25 @@ body{
   <div></div>
 	<section class="note-section"> 
 
+  
   <div id="note-div">
+  	<% if @posts %>
 		<h1>List of all notes</h1>
 		<% @posts.each do |post| %>
 		<div class='row' >
 			<div class='col-md-12'>
 		
 		<br>
- 		 <%= post.title %>
+ 		<a href="/posts/<%=post.id%>"><%= post.title %></a>
  		 <br>
  		 <%= markdown post.content %>
  		 <hr>
  		 </div>
  		  </div>
+ 		
  		  <%end%>
- 		 
-		</div>
-
+ 		  <%end%>
+ 		    </div>
 
  
 
