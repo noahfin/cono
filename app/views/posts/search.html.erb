@@ -1,0 +1,10 @@
+
+<div class="buffer"></div>
+<center><h1>Seach Notes</h1>
+<div id="identicalForm">
+<%= form_tag(posts_path, :method => "get", id: "search-form") do %>
+<%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
+<%= submit_tag "Search", class:'btn-danger'%>
+<% end %>
+</div>
+</center>

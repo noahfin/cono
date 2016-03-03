@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get '/category/add' => 'categories#new'
   get '/category/:id' => 'categories#index'
   post '/category' => 'categories#create'
+  get '/search' => 'posts#search'
 
 
 end

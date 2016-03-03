@@ -4,7 +4,20 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    if @posts =  Post.where("user_id = ?", current_user.id)
+      if params[:search]
+         @posts = Post.search(params[:search]).order("created_at DESC")
+      else
+        @posts = Post.all.order('created_at DESC')
+      end
+      render :home 
+    else
+      redirect_to "/login"
+    end
+
+  end
+  def search
+    
   end
 
   # GET /posts/1

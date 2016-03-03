@@ -24,7 +24,7 @@
    
     </div>
 
-
+  
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       
@@ -36,11 +36,10 @@
           <ul id="drop" class="dropdown-menu">
             <li><% if current_user%><%= link_to "logout", '/logout' %> <%else%> 
             	<%= link_to "login", '/login' %><%end%></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
+            
+             <li><%= link_to "login", '/login' %></li> 
             <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
+            <li><a href="/search"> <span class=" fa fa-search">Seach for notes</span></a></li>          </ul>
         </li>
       </ul>
      </div>
