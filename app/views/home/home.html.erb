@@ -6,6 +6,22 @@ body{
     		font-weight: 400;
    			line-height: 20px;
 		}
+		.center-nav {
+			width: 100%;
+			background: url('https://images.unsplash.com/photo-1456318019777-ccdc4d5b2396?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=98c1e2830c04ada31947c6896f2e69da');
+			background-position: center;
+			background-size: cover;
+			height: 300px;
+			border-bottom: 5px solid  #3498DB;
+			border-top: 5px solid  #3498DB;
+			margin-top: 46px;
+		}
+		.wrapper {
+			margin: 0 auto;
+			width: 90%;
+
+
+		}
 		a{
 			color: #757575; 
 		}
@@ -30,17 +46,15 @@ body{
 			
 		}
 		.left-nav{
-
-			position: fixed;
-		
-			width: 220px;
-			height: 1100px;
-			background-color: #37474f;
+			margin-top: 20px;
+			float: left;
+			width: 25%;
+			background-color: rgba(55, 71, 79, .8);
 
 		}
 		.nav-header{
 
-		background-color:	 #263238;
+	  	background-color:	rgba(38, 50, 56, .8);
         padding: 20px;
         padding-top: 30px;
         height: 151px;
@@ -57,16 +71,15 @@ body{
 
 		}
 		.note-section{
-		
-			max-width: 1060px;
+			width: 75%;
 			overflow: auto;
-			margin-left: 245px;
+			float: left;
 			margin-top: 5px;
-			
 
+			
 		}
 		.panel-default{
-			width: 1150px;
+			
 		}
 		#center{
 			padding-right: 5px;
@@ -95,8 +108,9 @@ body{
 </head>
 <body>
 	
-
-	<nav class="left-nav">
+	<div class= "center-nav">
+ <div class="wrapper">
+ 	<nav class="left-nav">
 	  <header class="nav-header">
 		<img class="user-avater" src="<%= gravatar_url %>" title="source: imgur.com" alt="user avater" height="60" width="60">
 	   	  <h4 class="user-name"><%= current_user.name if current_user%></h4>
@@ -135,6 +149,7 @@ body{
 		</ul>
 
 	</nav>
+	
 	  <div style="clear: both;"></div> 
   <!-- Now in order to prevent the next div from floating beside the top ones, 
        we use `clear: both;`. This is like a wall, so now none of the div's 
@@ -143,7 +158,12 @@ body{
   <div></div>
 	<section class="note-section"> 
 
-  
+	</section>
+	
+
+</div><!--  end of wrapper -->
+</div><!--  end of center-nav -->
+  <div class="wrapper">
   <div id="note-div">
   	<% if @posts %>
 		<h1>List of all notes</h1>
@@ -162,17 +182,7 @@ body{
  		  <%end%>
  		  <%end%>
  		    </div>
-
- 
-
-
-
-
-
-
-	</section>
-
-  
+  </div><!--  end of wrapper -->
 <div class="modal fade" id="addCategory" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
