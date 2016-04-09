@@ -102,11 +102,10 @@ body{
 	.left-nav .caret{
 	
 	 }
-	 	.left-nav .fa-gear{
-	 	position: absolute;
-		left: 200px;
-		top: -200;
+	 .btn-size {
+	 	width: 120px;
 	 }
+	 	
 
 	</style>
 
@@ -117,23 +116,15 @@ body{
  <div class="wrapper">
  	<nav class="left-nav">
 	  <header class="nav-header">
-	  	<ul class="nav-down">      
-        		<li class="dropdown">
-          		 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="fa fa-gear"></span></a>
-          		   <ul class="dropdown-menu">
-           		 	 <li><%= link_to "Logout", '/logout' %></li>
-           			 <li><%= link_to "posts/new", 'posts/new' %></li>
-            		 <li><a href="#">Somethin</a></li>
-           		     <li role="separator" class="divider"></li>
-            		 <li> <a href="#" data-toggle="modal" data-target="#addCategory" class="btn btn-primary location width33 plus">Add Categpry</a></li>
-          		 </ul>
-           	 </ul>
+	  	
 		<img class="user-avater" src="<%= gravatar_url %>" title="source: imgur.com" alt="user avater" height="60" width="60">
 	   	  <h4 class="user-name"><%= current_user.name if current_user%></h4>
 			
 		</header>
 			<ul class="bottom-links">
-			
+				<li> <a href="posts/new" class="btn  btn-success btn-size">New Note</a></li>	
+          <li> <a href="#" data-toggle="modal" data-target="#addCategory" class="btn btn-primary location width33 plus">Add Category</a></li>	
+           </li>
 				<% if @categories %>
 				<% @categories.each do |item| %>
 			<li>
