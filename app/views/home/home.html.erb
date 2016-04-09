@@ -49,12 +49,12 @@ body{
 			margin-top: 20px;
 			float: left;
 			width: 25%;
+			height: 250px;
 			background-color: rgba(55, 71, 79, .8);
-
+			overflow: scroll;
 		}
 		.nav-header{
-
-	  	background-color:	rgba(38, 50, 56, .8);
+	    	background-color:	rgba(38, 50, 56, .8);
         padding: 20px;
         padding-top: 30px;
         height: 151px;
@@ -100,7 +100,12 @@ body{
 	 	list-style: none;
 	 }
 	.left-nav .caret{
-		margin-left: -20px;
+	
+	 }
+	 	.left-nav .fa-gear{
+	 	position: absolute;
+		left: 200px;
+		top: -200;
 	 }
 
 	</style>
@@ -112,9 +117,7 @@ body{
  <div class="wrapper">
  	<nav class="left-nav">
 	  <header class="nav-header">
-		<img class="user-avater" src="<%= gravatar_url %>" title="source: imgur.com" alt="user avater" height="60" width="60">
-	   	  <h4 class="user-name"><%= current_user.name if current_user%></h4>
-			<ul class="pull-left nav-down">      
+	  	<ul class="nav-down">      
         		<li class="dropdown">
           		 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="fa fa-gear"></span></a>
           		   <ul class="dropdown-menu">
@@ -125,15 +128,11 @@ body{
             		 <li> <a href="#" data-toggle="modal" data-target="#addCategory" class="btn btn-primary location width33 plus">Add Categpry</a></li>
           		 </ul>
            	 </ul>
-		</header>
+		<img class="user-avater" src="<%= gravatar_url %>" title="source: imgur.com" alt="user avater" height="60" width="60">
+	   	  <h4 class="user-name"><%= current_user.name if current_user%></h4>
 			
+		</header>
 			<ul class="bottom-links">
-			<li>
-				<a href=""><i class=" fa fa-external-link"></i>Links</a>				
-			</li>
-			<li>
-				<a href=""><i class=" fa  fa-gears"></i>tutorials</a>				
-			</li>
 			
 				<% if @categories %>
 				<% @categories.each do |item| %>
@@ -144,8 +143,6 @@ body{
 			<% end %>
 		</ul>
 			
-
-
 		</ul>
 
 	</nav>
