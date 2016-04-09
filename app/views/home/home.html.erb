@@ -74,9 +74,11 @@ body{
 			width: 75%;
 			overflow: auto;
 			float: left;
-			margin-top: 5px;
+			margin-top: 5px;	
 
-			
+		}
+		.note-div {
+				position: absolute;
 		}
 		.panel-default{
 			
@@ -105,6 +107,50 @@ body{
 	 .btn-size {
 	 	width: 120px;
 	 }
+	 .header-of-post {
+	 	max-width: 500px;
+	 	margin-right: 0;
+   
+	 		
+	 }
+	 .posts-head {
+
+
+	 }
+	 .add-btns {
+
+ 
+   position: absolute;
+	 	height: 100px;
+	  width: 50%;
+	   margin-top: 20px;
+	  left: 700px;
+
+   display: block;
+   float: left;
+	 }
+	 .add-btns .btn  {
+
+	 
+	  margin-right: 20px;
+	 	display:  inline;
+	 }
+	 .add-btns h1 {
+	 	}
+	 	.L-head {
+	 		height: 0px;
+	 		margin-right: 0px;
+	 		width: 50%;
+	 		padding-right: 0px;
+	 		position: relative;
+	 		top: 10px;
+	 }
+	 .start-of-post{
+	 margin-top: 10px
+	}
+	.dodo {
+		margin-top: 60px;
+	}
 	 	
 
 	</style>
@@ -122,9 +168,7 @@ body{
 			
 		</header>
 			<ul class="bottom-links">
-				<li> <a href="posts/new" class="btn  btn-success btn-size">New Note</a></li>	
-          <li> <a href="#" data-toggle="modal" data-target="#addCategory" class="btn btn-primary location width33 plus">Add Category</a></li>	
-           </li>
+
 				<% if @categories %>
 				<% @categories.each do |item| %>
 			<li>
@@ -154,9 +198,16 @@ body{
   <div class="wrapper">
   <div id="note-div">
   	<% if @posts %>
-		<h1>List of all notes</h1>
+  	
+  		<div class="L-head">
+		<h1 class="posts-head">List of all notes</h1> 
+		</div>
+		<div class="add-btns">
+		 <a href="posts/new" class="btn  btn-success btn-size">New Note</a><a href="#" data-toggle="modal" data-target="#addCategory" class="btn btn-primary location width33 plus">Add Category</a>	</div>
+	  <hr class="dodo">
+
 		<% @posts.each do |post| %>
-		<div class='row' >
+		<div class='row start-of-post'  >
 			<div class='col-md-12'>
 		
 		<br>
