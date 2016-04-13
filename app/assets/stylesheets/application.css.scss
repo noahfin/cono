@@ -54,3 +54,130 @@
  .buffer {
  	margin-top: 100px;
  }
+ body{
+       font-family: "Helvetica","Arial",sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+    .center-nav {
+      width: 100%;
+      background: url('https://images.unsplash.com/photo-1456318019777-ccdc4d5b2396?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=98c1e2830c04ada31947c6896f2e69da');
+      background-position: center;
+      background-size: cover;
+      height: 300px;
+      border-bottom: 5px solid  #777;
+      border-top: 5px solid  #777;
+      margin-top: 46px;
+    }
+    .wrapper {
+      margin: 0 auto;
+      width: 90%;
+    }
+    a{
+      color: #757575; 
+    }
+    .bottom-links{
+      list-style: none;
+      padding: 16px 40px;
+      margin: 0;
+      color: #757575;
+    }
+    a .bottom-links{
+      color: #757575;
+    } 
+    .caret {
+      font-size: 14px;
+    }
+    .navbar #brand{
+      padding-left: -24px;
+      font-size: 21px;
+      margin-left: -50px;  
+    }
+    .left-nav{
+      margin-top: 20px;
+      float: left;
+      width: 25%;
+      height: 250px;
+      background-color: rgba(55, 71, 79, .8);
+      overflow: scroll;
+    }
+    .nav-header{
+      background-color: rgba(38, 50, 56, .8);
+      padding: 20px;
+      padding-top: 30px;
+      height: 151px;
+      color: whitesmoke;
+    }
+    .left-nav i {
+      padding-right: 5px;
+      font-weight: 200;
+    }
+    .left-nav li{
+      padding-bottom: 8px;
+      font-size: 16px;
+    }
+    .note-section{
+      width: 75%;
+      overflow: auto;
+      float: left;
+      margin-top: 5px;  
+    }
+    .note-div {
+      position: absolute;
+    }
+    #center{
+      padding-right: 5px;
+      position: relative;
+      left: 500px;
+      margin: 0 auto;
+      text-align: center;
+      color: black;
+    }
+   .fa-tint{
+      padding-left: 4px;
+   }
+   .user-avater{
+      object-fit: cover;
+   }
+   ul{
+      list-style: none;
+   }
+   .btn-size {
+      width: 120px;
+   }
+   .header-of-post {
+      max-width: 500px;
+      margin-right: 0;   
+   }
+   .add-btns {
+     position: absolute;
+     height: 100px;
+     width: 50%;
+     margin-top: 20px;
+     left: 800px;
+     display: block;
+     float: left;
+   }
+   .add-btns .btn  { 
+      margin-right: 30px;
+      display:  inline;
+   }
+    .L-head {
+      height: 0px;
+      margin-right: 0px;
+      width: 50%;
+      padding-right: 0px;
+      position: relative;
+      top: 10px;
+   }
+   .start-of-post{
+      margin-top: 10px
+  }
+  .dodo {
+      margin-top: 60px;
+  }
+  
+    
+
+    

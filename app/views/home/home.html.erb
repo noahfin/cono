@@ -1,247 +1,63 @@
-
-	<style type="text/css">
-body{
-			 font-family: "Helvetica","Arial",sans-serif;
-    		font-size: 14px;
-    		font-weight: 400;
-   			line-height: 20px;
-		}
-		.center-nav {
-			width: 100%;
-			background: url('https://images.unsplash.com/photo-1456318019777-ccdc4d5b2396?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=98c1e2830c04ada31947c6896f2e69da');
-			background-position: center;
-			background-size: cover;
-			height: 300px;
-			border-bottom: 5px solid  #3498DB;
-			border-top: 5px solid  #3498DB;
-			margin-top: 46px;
-		}
-		.wrapper {
-			margin: 0 auto;
-			width: 90%;
-
-
-		}
-		a{
-			color: #757575; 
-		}
-		.bottom-links{
-			list-style: none;
-			 padding: 16px 40px;
-   			 margin: 0;
-    		color: #757575;
-		}
-		a .bottom-links{
-			color: #757575;
-		}
-		
-		.caret {
-			font-size: 14px;
-
-		}
-		.navbar #brand{
-			padding-left: -24px;
-			font-size: 21px;
-			margin-left: -50px;
-			
-		}
-		.left-nav{
-			margin-top: 20px;
-			float: left;
-			width: 25%;
-			height: 250px;
-			background-color: rgba(55, 71, 79, .8);
-			overflow: scroll;
-		}
-		.nav-header{
-	    	background-color:	rgba(38, 50, 56, .8);
-        padding: 20px;
-        padding-top: 30px;
-        height: 151px;
-        color: whitesmoke;
-		}
-		.left-nav i {
-			padding-right: 5px;
-			font-weight: 200;
-		}
-		.left-nav li{
-			padding-bottom: 8px;
-			font-size: 16px;
-			
-
-		}
-		.note-section{
-			width: 75%;
-			overflow: auto;
-			float: left;
-			margin-top: 5px;	
-
-		}
-		.note-div {
-				position: absolute;
-		}
-		.panel-default{
-			
-		}
-		#center{
-			padding-right: 5px;
-			position: relative;
-			left: 500px;
-			margin: 0 auto;
-			text-align: center;
-			color: black;
-		}
-
-	.fa-tint{
-	 	padding-left: 4px;
-	 }
-	 .user-avater{
-	 object-fit: cover;
-	 }
-	 ul{
-	 	list-style: none;
-	 }
-	.left-nav .caret{
-	
-	 }
-	 .btn-size {
-	 	width: 120px;
-	 }
-	 .header-of-post {
-	 	max-width: 500px;
-	 	margin-right: 0;
-   
-	 		
-	 }
-	 .posts-head {
-
-
-	 }
-	 .add-btns {
-
- 
-   position: absolute;
-	 	height: 100px;
-	  width: 50%;
-	   margin-top: 20px;
-	  left: 800px;
-
-   display: block;
-   float: left;
-	 }
-	 .add-btns .btn  {
-
-	 
-	  margin-right: 30px;
-	 	display:  inline;
-	 }
-	 .add-btns h1 {
-	 	}
-	 	.L-head {
-	 		height: 0px;
-	 		margin-right: 0px;
-	 		width: 50%;
-	 		padding-right: 0px;
-	 		position: relative;
-	 		top: 10px;
-	 }
-	 .start-of-post{
-	 margin-top: 10px
-	}
-	.dodo {
-		margin-top: 60px;
-	}
-	 	
-
-	</style>
-
-</head>
 <body>
-	
 	<div class= "center-nav">
- <div class="wrapper">
- 	<nav class="left-nav">
-	  <header class="nav-header">
-	  	
-		<img class="user-avater" src="<%= gravatar_url %>" title="source: imgur.com" alt="user avater" height="60" width="60">
-	   	  <h4 class="user-name"><%= current_user.name if current_user%></h4>
-			
-		</header>
-			<ul class="bottom-links">
-
-				<% if @categories %>
-				<% @categories.each do |item| %>
-			<li>
-				<a href="category/<%= item.id %>"><i class=" fa fa-folder"></i><%=item.name%></a>				
-			</li>
-			<% end %>
-			<% end %>
-		</ul>
-			
-		</ul>
-
-	</nav>
-	
-	  <div style="clear: both;"></div> 
-  <!-- Now in order to prevent the next div from floating beside the top ones, 
-       we use `clear: both;`. This is like a wall, so now none of the div's 
-       will be floated after this point. The container height will now also include the 
-       height of these floated divs -->
-  <div></div>
-	<section class="note-section"> 
-
-	</section>
-	
-
-</div><!--  end of wrapper -->
+	 <div class="wrapper">
+	 	<nav class="left-nav">
+		  <header class="nav-header">	
+				<img class="user-avater" src="<%= gravatar_url %>" title="source: imgur.com" alt="user avater" height="60" width="60">
+		   	  <h4 class="user-name"><%= current_user.name if current_user%></h4>		
+			</header>
+				<ul class="bottom-links">
+					<% if @categories %>
+					<% @categories.each do |item| %>
+				<li>
+					<a href="category/<%= item.id %>"><i class=" fa fa-folder"></i><%=item.name%></a>				
+				</li>
+				<% end %>
+				<% end %>
+			</ul>	
+		</nav>
+		<div style="clear: both;"></div> 
+		<section class="note-section"> 
+		</section>
+	</div><!--  end of wrapper -->
 </div><!--  end of center-nav -->
   <div class="wrapper">
-  <div id="note-div">
-  	<% if @posts %>
-  	
-  		<div class="L-head">
-		<h1 class="posts-head">List of all notes</h1> 
+  	<div id="note-div">
+  		<% if @posts %>
+			<h1 class="posts-head">List of all notes</h1> 
 		</div>
 		<div class="add-btns">
-		 <a href="posts/new" class="btn  btn-success btn-size">New Note</a><a href="#" data-toggle="modal" data-target="#addCategory" class="btn btn-primary location width33 plus">Add Category</a>	</div>
+		 	<a href="posts/new" class="btn  btn-success btn-size">New Note</a><a href="#" data-toggle="modal" data-target="#addCategory" class="btn btn-primary location width33 plus">Add Category</a>	
+		</div>
 	  <hr class="dodo">
-
 		<% @posts.each do |post| %>
-		<div class='row start-of-post'  >
-			<div class='col-md-12'>
-		
-		<br>
- 		<a href="/posts/<%=post.id%>"><%= post.title %></a>
- 		 <br>
- 		 <%= markdown post.content %>
- 		 <hr>
- 		 </div>
- 		  </div>
- 		
- 		  <%end%>
- 		  <%end%>
- 		    </div>
+		<div class='row start-of-post' >
+			<div class='col-md-12'>	
+				<br>
+	 		<a href="/posts/<%=post.id%>"><%= post.title %></a>
+	 		 <br>
+	 		 <%= markdown post.content %>
+	 		<hr>
+	 	 </div>
+	 </div>
+	 	<%end%>
+	 	<%end%>
+	 </div>
   </div><!--  end of wrapper -->
 <div class="modal fade" id="addCategory" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="myModalLabel">Add Category</h4>
       </div>
-
       <div class="modal-body">
-
          <%= bootstrap_form_for :categories, :html => { :id=> "identicalForm"}, url: '/category' do |f| %>
-	<h1 class ="center-head">Add category!</h1>
-             <%= f.text_field :name,autofocus: true, placeholder: 'Category', hide_label: true %>
-         
-            <%= f.submit "Submit",  class: 'btn  btn-success check' %>
-
-
-			<% end %>
-    </div>
-  </div>
-</div>
+				<h1 class ="center-head">Add category!</h1>
+        <%= f.text_field :name,autofocus: true, placeholder: 'Category', hide_label: true %>
+        <%= f.submit "Submit",  class: 'btn  btn-success check' %>
+				<% end %>
+    	</div>
+  	</div>
+	</div>
 </div>
