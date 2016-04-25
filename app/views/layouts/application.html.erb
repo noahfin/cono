@@ -33,8 +33,8 @@
           <ul id="drop" class="dropdown-menu">
             <li><% if current_user%><%= link_to "logout", '/logout' %> <%else%> 
             	<%= link_to "login", '/login' %><%end%></li>
-            
-        
+            <li> <%= link_to "Posts", "/posts" %></li>
+            <li> <%= link_to "Home", "/home" %></li>
             <li role="separator" class="divider"></li>
             <li><a href="/search"> <span class=" fa fa-search">Seach for notes</span></a></li>          </ul>
         </li>

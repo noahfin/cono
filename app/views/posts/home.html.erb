@@ -5,16 +5,13 @@
 <body>
 	
 
-	  <div style="clear: both;"></div> 
-  <!-- Now in order to prevent the next div from floating beside the top ones, 
-       we use `clear: both;`. This is like a wall, so now none of the div's 
-       will be floated after this point. The container height will now also include the 
-       height of these floated divs -->
+	  
+  
   <div></div>
 	<section class="note-section"> 
 
 
-  <div id="note-div">
+  <div style="margin: auto;" id="note-div">
   	<% if @posts %>
 		<h1>List of all notes</h1>
 		<% @posts.each do |post| %>
